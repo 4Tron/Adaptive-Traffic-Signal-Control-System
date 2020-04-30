@@ -2,16 +2,9 @@
 
 ## 1.Abstract :
 
-Traffic congestion is becoming a serious problem with a large number of cars on the
-roads. Vehicles queue length waiting to be processed at the intersection is rising sharply
-with the increase of the traffic flow, and the traditional traffic lights cannot efficiently
-schedule it. In fact, we use computer vision and machine learning to have the
-characteristics of the competing trafc ows at the signalized road intersection. This is
-done by a state-of-the-art, real-time object detection based on a deep Convolutional
-Neural Networks called You Only Look Once (YOLO). Then traffic signal phases are
-optimized according to collected data, mainly queue density and waiting time per
-vehicle, to enable as much as more vehicles to pass safely with minimum waiting time.
-YOLO can be implemented on embedded controllers using Transfer Learning
+Traffic congestion is becoming a serious problem with a large number of cars on the roads. Vehicles queue length waiting to be processed at the intersection is rising sharply with the increase of the traffic flow, and the traditional traffic lights cannot efficiently schedule it. 
+
+In fact, we use computer vision and machine learning to have the characteristics of the competing trafc ows at the signalized road intersection. This is done by a state-of-the-art, real-time object detection based on a deep Convolutional Neural Networks called You Only Look Once (YOLO). Then traffic signal phases are optimized according to collected data, mainly queue density and waiting time per vehicle, to enable as much as more vehicles to pass safely with minimum waiting time. YOLO can be implemented on embedded controllers using Transfer Learning
 technique.
 
 ## 2.Problem Statement :
