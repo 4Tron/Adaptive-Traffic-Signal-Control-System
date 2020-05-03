@@ -104,7 +104,7 @@ The solution can be explained in four simple steps:
 
 
 ## 8. Result : 
-![](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/op.jpg)
+![](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/op.png)
 
 ## 9. Conclusion :
 
