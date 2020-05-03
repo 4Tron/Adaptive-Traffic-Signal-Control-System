@@ -35,9 +35,9 @@ The code is tested and run with Python 3.7.4 and Python 3.5.6 on Ubuntu 18.04.3 
 (Windows 10 platforms should also be able to run the project).
 
 
-## 4.Technology :
+## 5.Technology :
 
-### 4.1 YOLO
+### 5.1 YOLO
 
 You only look once (YOLO) is a state-of-the-art, real-time object detection
 systemYOLO, a new approach to object detection. Prior work on object detection
@@ -58,7 +58,7 @@ This is a demo project that uses YoloV3 neural network to count vehicles on a gi
 
 YoloV3 model is pretrained and downloaded (Internet connection is required for the download process).
 
-## 5.Working :-
+## 6.Working :-
 
 The solution can be explained in four simple steps:
 
@@ -67,7 +67,7 @@ The solution can be explained in four simple steps:
     3.Input this data to the Time Allocation module.
     4.The output will be the time slots for each lane, accordingly.
 
-### 5.1  Sequence of operations performed:
+### 6.1  Sequence of operations performed:
 
     1.Camera sends images after regular short intervals to our system.
     2.The system determines further the number of cars in the lane and hence computes its
@@ -77,8 +77,8 @@ The solution can be explained in four simple steps:
     4.This value is then triggered by the microprocessor to the respective Traffic Lights.
 
 
-## 6.Code :
-### 6.1.Synchronization logic:
+## 7.Code :
+### 7.1.Synchronization logic:
 
     f = open("out.txt", "r")
     no_of_vehicles=[]
@@ -94,9 +94,7 @@ The solution can be explained in four simple steps:
     print(t, sum(t))
 
 
-## 7.Result :
-
-## 8.Conclusion :
+## 8.Result and Conclusion :
 
 The goal of this work is to improve intelligent transport systems by developing a Self-adaptive
 algorithm to control road traffic based on deep Learning. This new system facilitates the
