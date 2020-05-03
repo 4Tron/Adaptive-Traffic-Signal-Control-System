@@ -1,13 +1,13 @@
 # Adaptive Traffic Signal Control System
 
-## 1.Abstract :
+## 1. Abstract :
 
 Traffic congestion is becoming a serious problem with a large number of cars on the roads. Vehicles queue length waiting to be processed at the intersection is rising sharply with the increase of the traffic flow, and the traditional traffic lights cannot efficiently schedule it. 
 
 In fact, we use computer vision and machine learning to have the characteristics of the competing trafc ows at the signalized road intersection. This is done by a state-of-the-art, real-time object detection based on a deep Convolutional Neural Networks called You Only Look Once (YOLO). Then traffic signal phases are optimized according to collected data, mainly queue density and waiting time per vehicle, to enable as much as more vehicles to pass safely with minimum waiting time. YOLO can be implemented on embedded controllers using Transfer Learning
 technique.
 
-## 2.Problem Statement :
+## 2. Problem Statement :
 
 To build a self adaptive traffic light control system based on yolo.Disproportionate and
 diverse traffic in different lanes leads to inefficient utilization of same time slot for each
@@ -16,7 +16,7 @@ queuing.To create a system which enable the traffic management system to take ti
 allocation decisions for a particular lane according to the traffic density on other
 different lanes with the help of cameras, image processing modules.
 
-## 3.Introduction :
+## 3. Introduction :
 
 Traffic congestion is a major problem in many cities, and the fixed-cycle light signal controllers are not resolving the high waiting time in the intersection. We see often a policeman managing the movements instead of the traffic light. He sees road status and decides the allowed duration of each direction. This human achievement encourages us to create a smart Traffic light control taking into account the real time traffic condition and smartly manage the intersection. To implement such a system, we need two main parts: eyes to watch the real-time road condition and a brain to process it. A traffic signal system at its core has two major tasks: move as many users through the intersection as possible doing this with as little conflict between these users as possible.
 
@@ -35,7 +35,7 @@ The code is tested and run with Python 3.7.4 and Python 3.5.6 on Ubuntu 18.04.3 
 (Windows 10 platforms should also be able to run the project).
 
 
-## 5.Technology :
+## 5. Technology :
 
 ### 5.1 YOLO
 
@@ -46,11 +46,16 @@ regression problem to spatially separated bounding boxes and associated class
 probabilities. A single neural network predicts bounding boxes and class probabilities
 directly from full images in one evaluation. Since the whole detection pipeline is a
 single network, it can be optimized end-to-end directly on detection performance.
+
+![yolo](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/yolo.jpg)
+
 The object detection task consists in determining the location on the image where
 certain objects are present, as well as classifying those objects. Previous methods for
 this, like R-CNN and its variations, used a pipeline to perform this task in multiple
 steps. This can be slow to run and also hard to optimize, because each individual
-component must be trained separately. YOLO, does it all with a single neural netw
+component must be trained separately. YOLO, does it all with a single neural network.
+
+![yolo_net](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/yolo%20net.png)
 
 ### YoloV3 Car Counter
 
@@ -58,7 +63,9 @@ This is a demo project that uses YoloV3 neural network to count vehicles on a gi
 
 YoloV3 model is pretrained and downloaded (Internet connection is required for the download process).
 
-## 6.Working :-
+## 6. Working :-
+
+![signals](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/signal.png)
 
 The solution can be explained in four simple steps:
 
@@ -66,6 +73,8 @@ The solution can be explained in four simple steps:
     2.Scan and determine traffic density.
     3.Input this data to the Time Allocation module.
     4.The output will be the time slots for each lane, accordingly.
+
+![flow](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/seq.png)
 
 ### 6.1  Sequence of operations performed:
 
@@ -77,8 +86,8 @@ The solution can be explained in four simple steps:
     4.This value is then triggered by the microprocessor to the respective Traffic Lights.
 
 
-## 7.Code :
-### 7.1.Synchronization logic:
+## 7. Code :
+### 7.1 Synchronization logic:
 
     f = open("out.txt", "r")
     no_of_vehicles=[]
@@ -94,7 +103,10 @@ The solution can be explained in four simple steps:
     print(t, sum(t))
 
 
-## 8.Result and Conclusion :
+## 8. Result : 
+![](https://github.com/4Tron/Adaptive-Traffic-Signal-Control-System/blob/master/images/op.jpg)
+
+## 9. Conclusion :
 
 The goal of this work is to improve intelligent transport systems by developing a Self-adaptive
 algorithm to control road traffic based on deep Learning. This new system facilitates the
@@ -109,5 +121,5 @@ Finally, we have proposed a new algorithm taking this real-time data from YOLO a
 optimizing phases in order to reduce vehicle waiting time.
 
 
-## 9.Extensibility :
+## 10.Extensibility :
 You can easily extend this project by changing the classes you are interested in detecting and tracking (see what classes does YoloV3 support and/or change the neural network used by tensornets for better speed/accuracy.
